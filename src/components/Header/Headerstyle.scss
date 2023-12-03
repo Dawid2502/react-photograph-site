@@ -1,0 +1,102 @@
+header {
+    position: relative;
+    background-image: url("../Header/puppy-3688871_1920.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    .social-media {
+        position: absolute;
+        left: 5px;
+        bottom: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .icon-media {
+            padding: .5rem;
+            color: white;
+            font-size: 3.6rem;
+            transition: color .5s;
+        }
+        .icon-media:hover {
+            color: rgb(126, 126, 126);
+        }
+    }
+    .main-title-box {
+        position: absolute;
+        left: 20%;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30rem;
+        height: 100vh;
+        // background-color: rgba($color: #ffffff, $alpha: 0.15);
+        border-left: 10px solid white;
+        h1 {
+            color: white;
+            font-family: 'Black Ops One', cursive;
+            font-size: 2.4rem;
+            text-align: left;
+            letter-spacing: .2rem;
+            animation: textToRight 2s forwards;
+        }
+    }
+}
+header::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    content: '';
+    z-index: -1;
+}
+
+@keyframes textToRight {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    } to {
+        transform: translateX(10%);
+        opacity: 1;
+    }
+}
+@media (min-width: 768px) {
+    header {
+
+        .social-media {
+            left: 2rem;
+            .icon-media {
+                padding: 1.5rem;
+                font-size: 4.8rem;
+            }
+        }
+        .main-title-box {
+            width: 48rem;
+            h1 {
+                font-size: 3.6rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        .social-media {
+            .icon-media {
+                padding: 1.5rem;
+                font-size: 5.6rem;
+            }
+        }
+        .main-title-box {
+            width: 50rem;
+            h1 {
+                font-size: 4.8rem;
+            }
+        }
+    }
+}

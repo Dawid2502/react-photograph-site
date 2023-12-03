@@ -1,0 +1,184 @@
+.session-type-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgb(33, 33, 34);
+	font-family: 'Black Ops One', cursive;
+	letter-spacing: 0.2rem;
+	.section-title {
+		margin-top: 4rem;
+		padding: 2rem;
+		color: #bea672;
+		font-size: 3.2rem;
+		text-align: center;
+	}
+	.session-description {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: column;
+		.img-container {
+			position: relative;
+			width: 28rem;
+			height: 38rem;
+			img {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 21rem;
+				height: 31rem;
+				border: 0.5rem solid white;
+				object-fit: cover;
+				z-index: 7;
+			}
+			.background-square {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 22rem;
+				height: 32rem;
+				background-color: black;
+			}
+		}
+		.type-text {
+			padding: 4rem 1rem 0 1rem;
+			color: white;
+			font-size: 1.2rem;
+			span {
+				color: #bea672;
+			}
+		}
+	}
+	.session-price {
+		margin-bottom: 2rem;
+		.all-packages {
+			display: flex;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+			margin-bottom: 5rem;
+			.price-package {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 4rem;
+				width: 26rem;
+				background-color: white;
+				border-radius: 1.5rem;
+				box-shadow: 0.8rem 0.8rem 2.4rem 0 rgb(112, 116, 158);
+				.session-img {
+					margin: 1rem;
+					padding-top: 1.5rem;
+					height: 8rem;
+				}
+				.package-text {
+					position: relative;
+					text-align: center;
+					font-size: 1.1rem;
+					.package-title {
+						margin: 0;
+						padding: 1rem 2rem;
+						color: #bea672;
+						font-size: 2rem;
+						text-transform: uppercase;
+					}
+					.text-item {
+						margin: 0;
+						padding: 1rem;
+						font-weight: bold;
+						text-transform: uppercase;
+					}
+				}
+				.price {
+					margin: 0 0 1rem 0;
+					color: #bea672;
+					font-size: 3.2rem;
+				}
+			}
+			.price-package:first-of-type {
+				margin-top: 4rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.session-type-container {
+		.session-description {
+			.img-container {
+				width: 38rem;
+				height: 48rem;
+				img {
+					width: 31rem;
+					height: 41rem;
+				}
+				.background-square {
+					width: 32rem;
+					height: 42rem;
+				}
+			}
+			.type-text {
+				padding: 7rem 1.5rem 0 1.5rem;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.session-type-container {
+		.section-title {
+			margin-top: 10rem;
+		}
+		.price-title {
+			margin-top: 4rem;
+		}
+		.session-description {
+			flex-direction: row;
+			.img-container {
+				width: 42rem;
+				height: 52rem;
+				img {
+					width: 35rem;
+					height: 45rem;
+				}
+				.background-square {
+					width: 36rem;
+					height: 46rem;
+				}
+			}
+			.type-text {
+				padding-top: 0;
+				width: 40%;
+				font-size: 1.8rem;
+			}
+		}
+		.session-price {
+			margin-bottom: 2rem;
+			.all-packages {
+				flex-wrap: wrap;
+				.price-package {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					width: 30rem;
+					.session-img {
+						height: 9rem;
+					}
+					.package-text {
+						font-size: 1.2rem;
+						.package-title {
+							padding: 1rem 3rem;
+							font-size: 2.2rem;
+						}
+					}
+					.price {
+						font-size: 3.6rem;
+					}
+				}
+			}
+		}
+	}
+}
